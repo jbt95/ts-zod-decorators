@@ -46,14 +46,8 @@ export default class ZodValidator {
 	}
 
 	static validateInput(target: Object, methodName: string, paramValues: unknown[]) {
-		const methodMetadataMap = this.methodValidatorMap.get(target);
-		if (methodMetadataMap === undefined) {
-			throw new Error(`No validation schema registered for ${target.constructor.name}`);
-		}
-		const metadata = methodMetadataMap.get(methodName);
-		if (metadata === undefined || !metadata.paramsIndex) {
-			throw new Error(`No validation schema registered for ${target.constructor.name}.${methodName}`);
-		}
+		const methodMetadataMap = this.methodValidatorMap.get(target)!;
+		const metadata = methodMetadataMap.get(methodName)!;
 		for (const [index, input] of paramValues.entries()) {
 			if (metadata.paramsIndex.indexOf(index) != -1) {
 				metadata.inputSchema?.parse(input);
@@ -62,14 +56,8 @@ export default class ZodValidator {
 	}
 
 	static validateOutput(target: Object, methodName: string, output: unknown) {
-		const methodMetadataMap = this.methodValidatorMap.get(target);
-		if (methodMetadataMap === undefined) {
-			throw new Error(`No validation output schema registered for ${target.constructor.name}`);
-		}
-		const metadata = methodMetadataMap.get(methodName);
-		if (metadata === undefined || !metadata.paramsIndex) {
-			throw new Error(`No validation output schema registered for ${target.constructor.name}.${methodName}`);
-		}
+		const methodMetadataMap = this.methodValidatorMap.get(target)!;
+		const metadata = methodMetadataMap.get(methodName)!;
 		metadata.outputSchema?.parse(output);
 	}
 }

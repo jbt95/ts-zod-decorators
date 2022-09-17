@@ -1,0 +1,15 @@
+all: true
+check-coverage: true
+include:
+  - src
+exclude:
+  - "src/**/test.ts"
+statements: 100
+branches: 66
+functions: 100
+lines: 100
+watermarks:
+  branches: [90, 100]
+  lines: [90, 100]
+  functions: [90, 100]
+  statements: [90, 100]

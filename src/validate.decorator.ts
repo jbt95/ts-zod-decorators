@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import ZodValidator from './validator.class';
 
 export const Validate: MethodDecorator = (

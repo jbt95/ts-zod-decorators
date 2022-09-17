@@ -1,13 +1,18 @@
 {
 	"name": "ts-zod-decorators",
 	"version": "1.0.0",
-	"author": "jbt <jordi.bermejo@worldcoo.com>",
-	"license": "MIT",
+	"author": "Jordi Bermejo <jordi.bermejo@worldcoo.com>",
+	"main": "dist/index.js",
+	"types": "src/index.ts",
+	"license": "ISC",
 	"scripts": {
 		"test": "yarn mocha",
 		"type:check": "yarn tsc --noEmit",
-		"build": "yarn build",
-		"prepare": "yarn husky install"
+		"build": "yarn tsc",
+		"prepare": "yarn husky install",
+		"prepack": "tsc --build",
+		"postpack": "tsc --build --clean",
+		"test:coverage": "nyc mocha"
 	},
 	"devDependencies": {
 		"@types/eslint": "^8.4.6",
@@ -16,10 +21,12 @@
 		"@typescript-eslint/eslint-plugin": "^5.35.1",
 		"@typescript-eslint/parser": "^5.35.1",
 		"eslint": "^8.22.0",
+		"eslint-config-prettier": "^8.5.0",
 		"husky": "^8.0.1",
 		"lint-staged": "^13.0.3",
 		"mocha": "^10.0.0",
 		"mocha-minimalist-reporter": "^1.1.0",
+		"nyc": "^15.1.0",
 		"prettier": "^2.7.1",
 		"source-map-support": "^0.5.16",
 		"ts-node": "^10.0.0",
