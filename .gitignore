@@ -6,3 +6,4 @@ pids
 *.pid
 *.seed
 dist
+.nyc_output
