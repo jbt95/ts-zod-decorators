@@ -18,3 +18,4 @@ tsconfig.tsbuildinfo
 src/test.ts
 yarn.lock
 .npmignore
+.lintstagedrc.js

@@ -1,3 +1,9 @@
+### Installation
+
+```
+npm install ts-zod-decorators
+```
+
 ### Input validation
 
 ```ts
