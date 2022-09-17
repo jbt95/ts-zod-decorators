@@ -1,6 +1,6 @@
 {
 	"name": "ts-zod-decorators",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"author": "Jordi Bermejo <jordi.bermejo@worldcoo.com>",
 	"main": "dist/index.js",
 	"types": "src/index.ts",
@@ -8,10 +8,10 @@
 	"scripts": {
 		"test": "yarn mocha",
 		"type:check": "yarn tsc --noEmit",
-		"build": "yarn tsc",
+		"build": "yarn tsc --build",
 		"prepare": "yarn husky install",
-		"prepack": "tsc --build",
-		"postpack": "tsc --build --clean",
+		"prepack": "yarn test:coverage && yarn build",
+		"postpack": "yarn tsc --build --clean",
 		"test:coverage": "nyc mocha"
 	},
 	"devDependencies": {
