@@ -15,6 +15,6 @@ tsconfig.json
 *.tgz
 tsconfig.tsbuildinfo
 .editorconfig
-src
+src/test.ts
 yarn.lock
 .npmignore

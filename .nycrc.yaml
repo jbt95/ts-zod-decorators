@@ -3,7 +3,7 @@ check-coverage: true
 include:
   - src
 exclude:
-  - "src/**/test.ts"
+  - 'src/**/test.ts'
 statements: 100
 branches: 66
 functions: 100
