@@ -21,9 +21,8 @@ class Foo {
 ### Output validation
 
 ```ts
-import { ZodInput, Validate } from 'ts-zod-decorators';
+import { ZodInput, Validate, ZodOutput } from 'ts-zod-decorators';
 import * as z from 'zod';
-import { ZodOutput } from './zod-output.decorator';
 
 const schema = z.object({ name: z.string(), age: z.number() });
 
