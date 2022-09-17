@@ -1,34 +1,35 @@
 {
-  "name": "ts-zod-decorators",
-  "version": "1.0.0",
-  "author": "jbt <jordi.bermejo@worldcoo.com>",
-  "license": "MIT",
-  "scripts": {
-    "test": "yarn mocha",
-    "type:check": "yarn tsc --noEmit",
-    "build": "yarn build"
-  },
-  "devDependencies": {
-    "@types/eslint": "^8.4.6",
-    "@types/mocha": "^9.1.1",
-    "@types/node": "^18.7.18",
-    "@typescript-eslint/eslint-plugin": "^5.35.1",
-    "@typescript-eslint/parser": "^5.35.1",
-    "eslint": "^8.22.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "mocha": "^10.0.0",
-    "mocha-minimalist-reporter": "^1.1.0",
-    "prettier": "^2.7.1",
-    "source-map-support": "^0.5.16",
-    "ts-node": "^10.0.0",
-    "typescript": "^4.6.3"
-  },
-  "dependencies": {
-    "zod": "^3.18.0"
-  },
-  "peerDependencies": {
-    "zod": "^3.18.0"
-  },
-  "packageManager": "yarn@3.2.3"
+	"name": "ts-zod-decorators",
+	"version": "1.0.0",
+	"author": "jbt <jordi.bermejo@worldcoo.com>",
+	"license": "MIT",
+	"scripts": {
+		"test": "yarn mocha",
+		"type:check": "yarn tsc --noEmit",
+		"build": "yarn build",
+		"prepare": "yarn husky install"
+	},
+	"devDependencies": {
+		"@types/eslint": "^8.4.6",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "^18.7.18",
+		"@typescript-eslint/eslint-plugin": "^5.35.1",
+		"@typescript-eslint/parser": "^5.35.1",
+		"eslint": "^8.22.0",
+		"husky": "^8.0.1",
+		"lint-staged": "^13.0.3",
+		"mocha": "^10.0.0",
+		"mocha-minimalist-reporter": "^1.1.0",
+		"prettier": "^2.7.1",
+		"source-map-support": "^0.5.16",
+		"ts-node": "^10.0.0",
+		"typescript": "^4.6.3"
+	},
+	"dependencies": {
+		"zod": "^3.18.0"
+	},
+	"peerDependencies": {
+		"zod": "^3.18.0"
+	},
+	"packageManager": "yarn@3.2.3"
 }
