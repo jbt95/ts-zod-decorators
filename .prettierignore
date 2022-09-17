@@ -1,0 +1,8 @@
+**/*.js
+/.nyc_output
+.serverless
+/output*.json
+/input.graphql
+/input*.json
+/serverless.env.*.yml
+*.yml
