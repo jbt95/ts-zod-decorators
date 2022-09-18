@@ -29,7 +29,7 @@ const schema = z.object({ name: z.string(), age: z.number() });
 class Foo {
 	@Validate
 	@ZodOutput(schema)
-	public bar(input: z.infer<typeof schema>): Promise<z.infer<schema>> {
+	public bar(input: unknown): Promise<z.infer<schema>> {
 		Promise.resolve({ name: 'foo', age: 1 });
 	}
 }
