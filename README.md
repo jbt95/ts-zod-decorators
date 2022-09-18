@@ -30,7 +30,7 @@ class Foo {
 	@Validate
 	@ZodOutput(schema)
 	public bar(input: unknown): Promise<z.infer<schema>> {
-		Promise.resolve({ name: 'foo', age: 1 });
+		return Promise.resolve({ name: 'foo', age: 1 });
 	}
 }
 ```
