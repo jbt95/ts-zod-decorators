@@ -15,25 +15,25 @@
 		"test:coverage": "nyc mocha"
 	},
 	"devDependencies": {
-		"@types/eslint": "^8.4.6",
-		"@types/mocha": "^9.1.1",
-		"@types/node": "^18.7.18",
-		"@typescript-eslint/eslint-plugin": "^5.35.1",
-		"@typescript-eslint/parser": "^5.35.1",
-		"eslint": "^8.22.0",
-		"eslint-config-prettier": "^8.5.0",
-		"husky": "^8.0.1",
-		"lint-staged": "^13.0.3",
-		"mocha": "^10.0.0",
+		"@types/eslint": "^8.56.7",
+		"@types/mocha": "^10.0.6",
+		"@types/node": "^18.19.30",
+		"@typescript-eslint/eslint-plugin": "^7.5.0",
+		"@typescript-eslint/parser": "^7.5.0",
+		"eslint": "^9.0.0",
+		"eslint-config-prettier": "^9.1.0",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"mocha": "^10.4.0",
 		"mocha-minimalist-reporter": "^1.1.0",
 		"nyc": "^15.1.0",
-		"prettier": "^2.7.1",
-		"source-map-support": "^0.5.16",
-		"ts-node": "^10.0.0",
-		"typescript": "^4.6.3"
+		"prettier": "^3.2.5",
+		"source-map-support": "^0.5.21",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.4.4"
 	},
 	"dependencies": {
-		"zod": "^3.18.0"
+		"zod": "^3.22.4"
 	},
 	"peerDependencies": {
 		"zod": "^3.18.0"
