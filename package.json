@@ -1,6 +1,6 @@
 {
 	"name": "ts-zod-decorators",
-	"version": "1.7.0",
+	"version": "1.7.1",
 	"author": "Jordi Bermejo <berme495@gmail.com>",
 	"main": "dist/index.js",
 	"types": "src/index.ts",
