@@ -1,3 +1,7 @@
+### Summary
+
+This repository enhances the functionality of the Zod library by providing validation decorators. Zod is a TypeScript-first schema declaration and validation library. The added decorators make it easier to validate data against predefined schemas in TypeScript projects.
+
 ### Installation
 
 ```
