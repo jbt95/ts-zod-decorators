@@ -11,7 +11,7 @@
 		"type:check": "tsc --noEmit",
 		"build": "tsup",
 		"publish:npm": "bash scripts/publish.sh",
-		"prepack": "bun test:coverage && bun build",
+		"prepack": "pnpm test:coverage && pnpm build",
 		"postpack": "tsc --build --clean",
 		"test:coverage": "vitest run --coverage"
 	},
