@@ -1,6 +1,6 @@
 {
 	"name": "ts-zod-decorators",
-	"version": "1.7.1",
+	"version": "2.0.0",
 	"author": "Jordi Bermejo <jordi.dev95@gmail.com>",
 	"main": "dist/index.cjs",
 	"module": "dist/index.mjs",
@@ -10,7 +10,8 @@
 		"test": "vitest",
 		"type:check": "tsc --noEmit",
 		"build": "tsup",
-		"prepack": "pnpm test:coverage && pnpm build",
+		"publish:npm": "bash scripts/publish.sh",
+		"prepack": "bun test:coverage && bun build",
 		"postpack": "tsc --build --clean",
 		"test:coverage": "vitest run --coverage"
 	},

@@ -10,11 +10,11 @@
 
 ## Build, Test, and Development Commands
 
-- `bun install`: install dependencies with bun.
-- `bun build`: bundle to `dist/` using `tsup` (CJS/ESM + `.d.ts`).
-- `bun test`: run Vitest in watch mode.
-- `bun test:coverage`: run Vitest with coverage reporting.
-- `bun type:check`: run `tsc --noEmit` for type safety.
+- `pnpm install`: install dependencies with pnpm.
+- `pnpm build`: pnpmdle to `dist/` using `tsup` (CJS/ESM + `.d.ts`).
+- `pnpm test`: run Vitest in watch mode.
+- `pnpm test:coverage`: run Vitest with coverage reporting.
+- `pnpm type:check`: run `tsc --noEmit` for type safety.
 
 ## Coding Style & Naming Conventions
 
@@ -29,7 +29,7 @@
 - Framework: Vitest.
 - Current test file: `src/test.ts`; keep new tests here unless splitting.
 - Use `describe`/`it` blocks with clear scenario wording.
-- Run `bun test` during development and `bun test:coverage` before release.
+- Run `pnpm test` during development and `pnpm test:coverage` before release.
 
 ## Commit & Pull Request Guidelines
 
