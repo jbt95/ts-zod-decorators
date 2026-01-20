@@ -1,42 +1,47 @@
 {
 	"name": "ts-zod-decorators",
 	"version": "1.7.1",
-	"author": "Jordi Bermejo <berme495@gmail.com>",
-	"main": "dist/index.js",
-	"types": "src/index.ts",
+	"author": "Jordi Bermejo <jordi.dev95@gmail.com>",
+	"main": "dist/index.cjs",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
 	"license": "ISC",
 	"scripts": {
-		"test": "yarn mocha",
-		"type:check": "yarn tsc --noEmit",
-		"build": "yarn tsc --build",
-		"prepare": "yarn husky install",
-		"prepack": "yarn test:coverage && yarn build",
-		"postpack": "yarn tsc --build --clean",
-		"test:coverage": "nyc mocha"
+		"test": "vitest",
+		"type:check": "tsc --noEmit",
+		"build": "tsup",
+		"prepack": "pnpm test:coverage && pnpm build",
+		"postpack": "tsc --build --clean",
+		"test:coverage": "vitest run --coverage"
 	},
 	"devDependencies": {
-		"@types/eslint": "^8.56.7",
-		"@types/mocha": "^10.0.6",
-		"@types/node": "^18.19.30",
-		"@typescript-eslint/eslint-plugin": "^7.5.0",
-		"@typescript-eslint/parser": "^7.5.0",
-		"eslint": "^9.0.0",
+		"@types/eslint": "^9.6.0",
+		"@types/node": "^20.14.9",
+		"@typescript-eslint/eslint-plugin": "^8.0.0",
+		"@typescript-eslint/parser": "^8.0.0",
+		"@vitest/coverage-v8": "^2.1.0",
+		"eslint": "^9.6.0",
 		"eslint-config-prettier": "^9.1.0",
-		"husky": "^9.0.11",
-		"lint-staged": "^15.2.2",
-		"mocha": "^10.4.0",
-		"mocha-minimalist-reporter": "^1.1.0",
-		"nyc": "^15.1.0",
-		"prettier": "^3.2.5",
-		"source-map-support": "^0.5.21",
-		"ts-node": "^10.9.2",
-		"typescript": "^5.4.4"
+		"prettier": "^3.3.2",
+		"tsup": "^8.2.4",
+		"typescript": "^5.5.4",
+		"vitest": "^2.1.0"
 	},
 	"dependencies": {
-		"zod": "^3.22.4"
+		"zod": "^3.23.8"
 	},
 	"peerDependencies": {
-		"zod": "^3.18.0"
+		"zod": "^3.23.8"
 	},
-	"packageManager": "yarn@3.2.3"
+	"engines": {
+		"node": ">=20"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"require": "./dist/index.cjs",
+			"import": "./dist/index.mjs"
+		}
+	},
+	"packageManager": "pnpm@9.12.0"
 }
